@@ -16,5 +16,10 @@ typedef struct {
 void print_system_info();
 void create_process(int pid, const char* name);
 void show_process(Process* p);
-
+// GPU HAL interface
+void vrd_gpu_init(int width, int height);
+void vrd_gpu_clear(unsigned int color);
+void vrd_gpu_draw_pixel(int x, int y, unsigned int color);
+void vrd_gpu_info();
+void vrd_gpu_shutdown();
 #endif // OSHEADER_HPP
